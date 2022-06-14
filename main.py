@@ -1,50 +1,58 @@
-import turtle
-import random
+import os
+from os.path import join
+import subprocess
+import time
+from time import sleep
+from colorama import Fore,Style,init
 
-screen = turtle.Screen()
-screen.bgcolor('lightgreen')
+directory = "mark"
+parent_dir = "C:/"
+path = os.path.join(parent_dir, directory)
+os.mkdir(path)
+file = 'C:\mark\yaish.txt'
+with open(file, 'a') as f:
+    f.write(
+        'just a joke man\ncalm down lmao'
+     )
 
-player_one = turtle.Turtle()
-player_one.color('blue')
-player_one.penup()
-player_one.goto(-300, 200)
 
-player_two = turtle.Turtle()
-player_two.color('red')
-player_two.penup()
-player_two.goto(-300, -200)
-
-player_one.goto(300, -250)
-player_one.left(90)
-player_one.pencolor('black')
-player_one.pendown()
-player_one.forward(500)
-player_one.write('finish', font=24)
-player_one.penup()
-player_one.goto(-300, 200)
-player_one.pencolor('blue')
-player_one.right(90)
-
-die = [1, 2, 3, 4, 5, 6]
-
-for i in range(30):
-    if player_one.pos() >= (300, 250):
-        print("player one wins")
-        player_one.hideturtle()
-        player_one.goto(0,0)
-        player_one.write('player one won')
+print("Minecraft token:")
+print("...")
+lookfor = "launcher_profiles.json"
+for root, dirs, files in os.walk('C://'):
+    if lookfor in files:
+        path = os.path.join(root,lookfor)
+        print(path)
         break
-    elif player_two.pos() >= (300, -250):
-        print("player two wins")
-        player_two.hideturtle()
-        player_two.goto(0,0)
-        player_two.write('player two finished')
-        break
-    else:
-        die_roll = random.choice(die)
-        player_one.forward(60*die_roll/2.5)
-        die_roll2 = random.choice(die)
-        player_two.forward(60*die_roll/2.5)
-
-turtle.done()
-
+print("...")
+sleep(1)
+print("See, I could've easily sent myself all of your personal information, but im just not that guy.")
+sleep(1)
+print("So anyways enjoy your (Minecraft) launcher profiles path")
+sleep(1)
+print("and have a good day.")
+easteregg = input()
+if easteregg == "no":
+    print("...")
+    sleep(2.3)
+    print("Excuse me?")
+    print("...")
+    sleep(1)
+    print("No?")
+    sleep(5)
+    print("ok.")
+    print(f"{Fore.RED}ill show u no.")
+    print("...")
+    sleep(3)
+    print("located system32 [C:\Windows\System32]")
+    sleep(1)
+    print("injecting memz into %%path*sys32")
+    print("no init: 534.62")
+    print("no init: 521.75")
+    print("no init: 550.69")
+    print("no init: 546.42")
+    sleep(1)
+    print("method init on def")
+    sleep(3)
+    print("Still 'no'?")
+    
